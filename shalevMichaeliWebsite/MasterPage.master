@@ -5,74 +5,35 @@
 <html>
 <head runat="server">
     <title>shalev website</title>
-    <asp:ContentPlaceHolder id="head" runat="server">
+   <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
     </asp:ContentPlaceHolder>
 
-   <style>
-       .table_component {
-           overflow: auto;
-           width: 100%;
-       }
-
-       .table_component table {
-           border: 0px solid black;
-           height: 100%;
-           width: 100%;
-           table-layout: fixed;
-           border-collapse: collapse;
-           border-spacing: 2px;
-           text-align: center;
-       }
-
-       .table_component  caption {
-           caption-side:top;
-           text-align: center;
-       }
-
-       .table_component th {
-           border: 0px solid black;
-           background-color: black;
-           color: white;
-           padding: 5px;
-       }
-
-       .table_component td {
-           border: 0px solid #dededf;
-           background-color: #969696;
-           color: black;
-           padding: 5px;
-       }
-   </style>
+   
 </head>
 <body>
-    <div class="table_component" role="region" tabindex="0"></div>
+   
     <table>
-
-        <thead>
-            
-            <tr>
-            <th colspan="3">
-
-                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-                 </asp:ContentPlaceHolder></th>
-
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td><a href ="home.aspx"><img src="" height="50" /></a></td>
-                <td><a href ="help.aspx"><img src="" height="50"/></a></td>
-                <td><a href ="forms.aspx"><img src="" height="50"/></a></td>
-                <td><a href ="AspNet.aspx"><img src="" height="50"/></a></td>
-
-            </tr>
-        </tbody>
+        <td>
+            <tr> <h2 style="text-align: center;">shalev website</h2> </tr>
+        </td>
+        <td>
+            <a href="home.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
+            <a href="search.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
+            <a href="sign in.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
+            <a href="sign_up.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
+            <a href="help.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
+            <a href="about.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
+            <a href="forms.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
+            <a href="exit.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
+        </td>
     </table>
+
+       
     <div style="margin-top:8px"></div>
     </div>
 
         <div style="margin-top:40px; padding:20px;">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
                     </asp:ContentPlaceHolder>
         </div>
     

@@ -5,38 +5,24 @@
 <html>
 <head runat="server">
     <title>shalev website</title>
-   <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+   <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
 
    
 </head>
 <body>
-   
     <table>
-        <td>
-            <tr> <h2 style="text-align: center;">shalev website</h2> </tr>
-        </td>
-        <td>
-            <a href="home.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
-            <a href="search.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
-            <a href="sign in.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
-            <a href="sign_up.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
-            <a href="help.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
-            <a href="about.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
-            <a href="forms.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
-            <a href="exit.aspx"><img src="https://iconmonstr.com/wp-content/g/gd/makefg.php?i=../releases/preview/2012/png/iconmonstr-home-7.png&r=0&g=0&b=0"></a>
-        </td>
+        <tr>
+            <td> <h2 style="text-align: center;">shalev website</h2> </td>
+        </tr>
+        <tr><td>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
+                <asp:ContentPlaceHolder>
+          </td></tr>
     </table>
 
-       
-    <div style="margin-top:8px"></div>
-    </div>
+    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+    <asp:ContentPlaceHolder>
 
-        <div style="margin-top:40px; padding:20px;">
-            <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
-                    </asp:ContentPlaceHolder>
-        </div>
-    
-    
 </body>
 </html>

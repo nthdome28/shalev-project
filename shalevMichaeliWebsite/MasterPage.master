@@ -40,7 +40,7 @@
 
             <tr>
                 <td colspan="2" align="center" class="menu">
-                    <a href="home.aspx"><img src="home.png" alt="Home"></a>
+                    <a href="home.aspx"><img src="icons/home.png" alt="Home"></a>
                     <a href="search.aspx"><img src="icons/search.png" alt="Search"></a>
                     <a href="signIn.aspx"><img src="icons/login.png" alt="Sign In"></a>
                     <a href="signUp.aspx"><img src="icons/signup.png" alt="Sign Up"></a>

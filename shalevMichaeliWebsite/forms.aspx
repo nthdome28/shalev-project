@@ -1,14 +1,6 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="forms.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="forms.aspx.cs" Inherits="Default7" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
+    <h2>forms</h2>
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
-    <h1>טופס ניסיון</h1>
-        
-    <input type="text" name="firstName" id="firstName"/> enter your first name
-    <input type="submit" name="submit" id="submit" />
-    name = <%=name %>
-</asp:Content>
-
-
 

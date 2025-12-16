@@ -27,9 +27,10 @@
    
 
     <div>
-        <%= name %>
-        <%= subject %>
-        <%= animal %>
+       name = <%= name %> ,
+       subject = <%= subject %> ,
+       animal = <%= animal %> ,
+        open answer = <%= open%> .
     </div>
 </asp:Content>
 

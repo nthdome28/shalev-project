@@ -9,6 +9,7 @@
         body {
             font-family: Arial;
             margin: 0;
+            padding: 0;
         }
 
         .title {
@@ -30,7 +31,7 @@
 
 <body>
     <form runat="server">
-        <table width="100%" border="0">
+        <table width="100%" length="100%" border="5px" background="lightblue" >
 
             <tr>
                 <td colspan="2" class="title">
@@ -42,11 +43,11 @@
                 <td colspan="2" align="center" class="menu">
                     <a href="home.aspx"><img src="icons/home.png" alt="Home"></a>
                     <a href="search.aspx"><img src="icons/search.png" alt="Search"></a>
+                    <a href="forms.aspx"><img src="icons/forms.png" alt="Forms"></a>
                     <a href="signIn.aspx"><img src="icons/login.png" alt="Sign In"></a>
                     <a href="signUp.aspx"><img src="icons/signup.png" alt="Sign Up"></a>
                     <a href="help.aspx"><img src="icons/help.png" alt="Help"></a>
                     <a href="about.aspx"><img src="icons/about.png" alt="About"></a>
-                    <a href="forms.aspx"><img src="icons/forms.png" alt="Forms"></a>
                     <a href="exit.aspx"><img src="icons/exit.png" alt="Exit"></a>
                 </td>
             </tr>
@@ -57,6 +58,7 @@
                     </asp:ContentPlaceHolder>
                 </td>
             </tr>
+            <tr><td> </td></tr>
 
         </table>
     </form>

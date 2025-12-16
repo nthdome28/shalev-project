@@ -16,15 +16,18 @@
             font-size: 28px;
             text-align: center;
             padding: 10px;
+            background-color:antiquewhite;
         }
 
         .menu img {
             width: 30px;
             margin: 5px;
+            background-color:antiquewhite;
         }
 
         .content {
             padding: 20px;
+            background-color:antiquewhite;
         }
     </style>
 </head>

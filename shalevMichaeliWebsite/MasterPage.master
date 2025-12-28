@@ -12,6 +12,11 @@
             padding: 0;
         }
 
+        image {
+        width: 100px;
+        length: 60px;
+        }
+
         .title {
             font-size: 28px;
             text-align: center;
@@ -28,36 +33,37 @@
         .content {
             padding: 20px;
             background-color:antiquewhite;
+            align-content:baseline;
         }
     </style>
 </head>
 
 <body>
     <form runat="server">
-        <table width="100%" length="100%" border="5px" background="lightblue" >
+        <table width="100%" height="900px" border="5px" background="lightblue" >
 
             <tr>
-                <td colspan="2" class="title">
+                <td  class="title" height="50px">
                     shalev website
                 </td>
             </tr>
 
             <tr>
-                <td colspan="2" align="center" class="menu">
-                    <a href="home.aspx"><img src="icons/home.png" alt="Home"></a>
-                    <a href="search.aspx"><img src="icons/search.png" alt="Search"></a>
-                    <a href="forms.aspx"><img src="icons/forms.png" alt="Forms"></a>
-                    <a href="signIn.aspx"><img src="icons/login.png" alt="Sign In"></a>
-                    <a href="signUp.aspx"><img src="icons/signup.png" alt="Sign Up"></a>
-                    <a href="help.aspx"><img src="icons/help.png" alt="Help"></a>
-                    <a href="about.aspx"><img src="icons/about.png" alt="About"></a>
-                    <a href="exit.aspx"><img src="icons/exit.png" alt="Exit"></a>
+                <td colspan="2" align="center" class="menu" height="100px">
+                    <a href="home.aspx"><img src="images/homepage.png" class="image" alt="Home"></a>
+                    <a href="search.aspx"><img src="image/search.png" class="image" alt="Search"></a>
+                    <a href="forms.aspx"><img src="images/forms.png" class="image" alt="Forms"></a>
+                    <a href="signIn.aspx"><img src="images/signin.png" class="image" alt="Sign In"></a>
+                    <a href="signUp.aspx"><img src="images/signup.png" class="image" alt="Sign Up"></a>
+                    <a href="help.aspx"><img src="images/help.png" class="image" alt="Help"></a>
+                    <a href="about.aspx"><img src="images/about.png" class="image" alt="About"></a>
+                    <a href="exit.aspx"><img src="images/exit.png" class="image" alt="Exit"></a>
                     <a href="gorge.aspx"><img src="icons/gorgefloid.png" alt="gorge"></a>
                 </td>
             </tr>
 
             <tr>
-                <td colspan="2" class="content">
+                <td colspan="2" class="content" >
                     <asp:ContentPlaceHolder ID="MainContent" runat="server">
                     </asp:ContentPlaceHolder>
                 </td>
@@ -68,3 +74,5 @@
     </form>
 </body>
 </html>
+
+<a href="https://www.flaticon.com/free-icons/home-page"</a>

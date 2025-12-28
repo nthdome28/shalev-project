@@ -12,12 +12,14 @@
         java: <input type="checkbox" name="check2" checked id="check_3"  value="java" />
         gym: <input type="checkbox" name="check2" id="check_4"  value="gym" />
         <br />
-        fav animal:
+        race:
         <br />
-        dog: <input type="radio" name="radio1" id="radio_1" checked value="dog" />
-        cat: <input type="radio" name="radio1" id="radio_2"  value="cat"/>
-        lion: <input type="radio" name="radio1" checked id="radio_3"  value="lion" />
-        snake: <input type="radio" name="radio1" id="radio_4"  value="snake" />
+        white: <input type="radio" name="radio1" id="radio_1" checked value="white" />
+        black: <input type="radio" name="radio1" id="radio_2"  value="black"/>
+        chinese: <input type="radio" name="radio1" checked id="radio_3"  value="chinese" />
+         other: <textarea rows="1" cols="10" name="radio1" id="radio1" placeholder="write here..."></textarea>
+
+        <br />
         <br />
         open answer:
         <br />
@@ -29,7 +31,7 @@
     <div>
        name = <%= name %> ,
        subject = <%= subject %> ,
-       animal = <%= animal %> ,
+       race = <%= race %> ,
         open answer = <%= open%> .
     </div>
 </asp:Content>

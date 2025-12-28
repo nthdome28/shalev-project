@@ -9,14 +9,14 @@ public partial class Default7 : System.Web.UI.Page
 {
     public string name;
     public string subject;
-    public string animal;
+    public string race;
     public string open;
 
     protected void Page_Load(object sender, EventArgs e)
     {
         name = Request.Form["firstName"];
         subject = Request.Form["check2"];
-        animal = Request.Form["radio1"];
+        race = Request.Form["radio1"];
         open = Request.Form["textarea1"];
     }
 }

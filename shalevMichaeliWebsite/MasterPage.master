@@ -5,7 +5,7 @@
 <head runat="server">
     <title>Shalev Website</title>
 
-    <style type="text/css">
+    <style>
         body {
             font-family: Arial;
             margin: 0;
@@ -52,6 +52,7 @@
                     <a href="help.aspx"><img src="icons/help.png" alt="Help"></a>
                     <a href="about.aspx"><img src="icons/about.png" alt="About"></a>
                     <a href="exit.aspx"><img src="icons/exit.png" alt="Exit"></a>
+                    <a href="gorge.aspx"><img src="icons/gorgefloid.png" alt="gorge"></a>
                 </td>
             </tr>
 

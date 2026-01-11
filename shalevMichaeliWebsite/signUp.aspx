@@ -36,6 +36,10 @@
     <br />
     <br />
 
+     <input id="submit1" type="submit" value="submit" />
+ <br />
+  <br />
+
     <div>
      first name = <%= firstname %> ,
      last name = <%= lastname%> ,

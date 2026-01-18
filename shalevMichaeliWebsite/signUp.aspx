@@ -9,11 +9,11 @@
     last name: <input type="text" name="lastName" id="lastName" placeholder="example" />
     <br />
     <br />
-    <br />
-    passcode: <input type="text" name="passcode" id="passcode" placeholder="password..." />
+     <br />
+    email: <textarea rows="1" cols="30" name="mail" id="mail" placeholder="example@gmail.com"></textarea>
     <br />
      <br />
-    phone number or email: <textarea rows="1" cols="30" name="mail" id="mail" placeholder="example@gmail.com"></textarea>
+    passcode: <input type="text" name="passcode" id="passcode" placeholder="password..." />
     <br />
     <br />
     enter age group:
@@ -24,15 +24,14 @@
     40+ <input type="radio" name="age" id="check_4"  value="40+" />
     <br />
     <br />
-    race:
+    gender:
     <br />
-    white: <input type="radio" name="radio1" id="radio_1" checked value="white" />
-    black: <input type="radio" name="radio1" id="radio_2"  value="black"/>
-    chinese: <input type="radio" name="radio1" checked id="radio_3"  value="chinese" />
+    female: <input type="radio" name="radio1" id="radio_1" checked value="F" />
+    male: <input type="radio" name="radio1" id="radio_2"  value="M"/>
     other: <textarea rows="1" cols="10" name="radio1" id="radio1" placeholder="write here..."></textarea>
     <br />
     <br />
-    id: <input type="text" name="id" id="id" placeholder="enter id..." />
+    hobbies: <input type="text" name="id" id="id" placeholder="soccer, basketbal..." />
     <br />
     <br />
 

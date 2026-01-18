@@ -10,7 +10,7 @@
     <br />
     <br />
      <br />
-    email: <textarea rows="1" cols="30" name="mail" id="mail" placeholder="example@gmail.com"></textarea>
+    email: <textarea rows="1" cols="30" name="Email" id="Email" placeholder="example@gmail.com"></textarea>
     <br />
      <br />
     passcode: <input type="text" name="passcode" id="passcode" placeholder="password..." />
@@ -39,10 +39,12 @@
  <br />
   <br />
 
+    <%=st %>
+
     <div>
      first name = <%= firstname %> ,
      last name = <%= lastname%> ,
-     mail = <%= mail%> ,
+     Email = <%= Email%> ,
      age group = <%= agegroup%> ,
      id = <%= id%> ,
      race = <%= race%> .

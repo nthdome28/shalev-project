@@ -4,7 +4,7 @@
         <h2>sign in</h2>
    
   <br />
- phone number or email: <textarea rows="1" cols="30" name="mail" id="mail" placeholder="example@gmail.com"></textarea>
+ phone number or email: <textarea rows="1" cols="30" name="Email" id="Email" placeholder="example@gmail.com"></textarea>
  <br />
  <br />
   passcode: <input type="text" name="passcode" id="passcode" placeholder="password..." />
@@ -14,7 +14,6 @@
     <input id="submit1" type="submit" value="submit" />
     <br />
      <br />
-    mail = <%= mail%>
-    passcode = <%= passcode %>
+ 
 </asp:Content>
 

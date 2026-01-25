@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Web;
+using System.Web.UI;
 
-public partial class login : System.Web.UI.Page
+public partial class Default6 : Page
 {
     public string st = "";
-
     public string Email;
     public string passcode;
-
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -16,9 +14,8 @@ public partial class login : System.Web.UI.Page
             Email = Request.Form["Email"];
             passcode = Request.Form["passcode"];
 
-            // בדיקת משתמש רגיל
             string sql =
-                "SELECT * FROM tUsers " +
+                "SELECT * FROM [dbo].[Table] " +
                 "WHERE Email = '" + Email + "' " +
                 "AND UserPassword = '" + passcode + "'";
 

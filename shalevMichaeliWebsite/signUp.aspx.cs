@@ -23,26 +23,39 @@ public partial class Default5 : Page
             agegroup = Request.Form["age"];
             hobbies = Request.Form["hobbies"];
             passcode = Request.Form["passcode"];
+            string sql =
+                "SELECT * FROM [dbo].[Table] " +
+                "WHERE Email = '" + Email + "' ";
 
-            // If Age is INT in DB, convert properly. For now, store 0 if conversion fails
             int ageValue = 0;
             int.TryParse(agegroup.Split('-')[0], out ageValue);
 
-            string sqlInsert =
-                "INSERT INTO [dbo].[Table] " +
-                "(FirstName, LastName, Gender, Email, Age, Hobbies, UserPassword) VALUES (" +
-                "N'" + firstName + "', " +
-                "N'" + lastName + "', " +
-                "N'" + race + "', " +
-                "N'" + Email + "', " +
-                ageValue + ", " +
-                "N'" + hobbies + "', " +
-                "N'" + passcode + "'" +
-                ")";
+            bool userExists = MyAdoHelper.IsExist(sql);
 
-            MyAdoHelper.DoQuery(sqlInsert);
+            if (!userExists)
+            {
+                string sqlInsert =
+                    "INSERT INTO [dbo].[Table] " +
+                    "(FirstName, LastName, Gender, Email, Age, Hobbies, UserPassword) VALUES (" +
+                    "N'" + firstName + "', " +
+                    "N'" + lastName + "', " +
+                    "N'" + race + "', " +
+                    "N'" + Email + "', " +
+                    ageValue + ", " +
+                    "N'" + hobbies + "', " +
+                    "N'" + passcode + "'" +
+                    ")";
 
-            st = "נרשמת בהצלחה!";
+                MyAdoHelper.DoQuery(sqlInsert);
+
+                st = "נרשמת בהצלחה!";
+            }
+            else
+            {
+                st = "המשתמש תפוס";
+            }
+
+               
         }
     }
 }

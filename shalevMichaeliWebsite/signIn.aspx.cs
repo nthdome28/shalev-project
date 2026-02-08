@@ -14,20 +14,28 @@ public partial class Default6 : Page
             Email = Request.Form["Email"];
             passcode = Request.Form["passcode"];
 
-            string sql =
-                "SELECT * FROM [dbo].[Table] " +
-                "WHERE Email = '" + Email + "' " +
-                "AND UserPassword = '" + passcode + "'";
-
-            bool userExists = MyAdoHelper.IsExist(sql);
-
-            if (!userExists)
+            if (Email == "michaelishalev@gmail.com" && passcode == "2010Shalev")
             {
-                st = "אימייל או סיסמה שגויים";
+                Response.Redirect("menahel.aspx");
             }
             else
             {
-                Response.Redirect("home.aspx");
+
+                string sql =
+                    "SELECT * FROM [dbo].[Table] " +
+                    "WHERE Email = '" + Email + "' " +
+                    "AND UserPassword = '" + passcode + "'";
+
+                bool userExists = MyAdoHelper.IsExist(sql);
+
+                if (!userExists)
+                {
+                    st = "אימייל או סיסמה שגויים";
+                }
+                else
+                {
+                    Response.Redirect("home.aspx");
+                }
             }
         }
     }

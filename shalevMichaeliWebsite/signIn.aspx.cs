@@ -1,26 +1,23 @@
 ﻿using System;
-using System.Web.UI;
 
-public partial class Default6 : Page
+public partial class SignIn : System.Web.UI.Page
 {
     public string st = "";
-    public string Email;
-    public string passcode;
 
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Page.IsPostBack)
         {
-            Email = Request.Form["Email"];
-            passcode = Request.Form["passcode"];
+            string Email = Request.Form["Email"];
+            string passcode = Request.Form["passcode"];
 
-            if (Email == "michaelishalev@gmail.com" && passcode == "2010Shalev")
+            if (Email == "michaelishalev@gmail.com" && passcode == "2010Sh@lev")
             {
+                Session["admin"] = true;
                 Response.Redirect("menahel.aspx");
             }
             else
             {
-
                 string sql =
                     "SELECT * FROM [dbo].[Table] " +
                     "WHERE Email = '" + Email + "' " +
@@ -34,6 +31,7 @@ public partial class Default6 : Page
                 }
                 else
                 {
+                    Session["user"] = Email;
                     Response.Redirect("home.aspx");
                 }
             }

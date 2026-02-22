@@ -7,24 +7,17 @@ public partial class Menahel : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        // 🔐 Protect admin page
-        if (Session["admin"] == null)
-        {
-            Response.Redirect("signIn.aspx");
-        }
-
-        if (Page.IsPostBack)
-        {
+        
             string firstName = Request.Form["firstName"];
             string lastName = Request.Form["lastName"];
 
             string sql =
                 "SELECT * FROM [dbo].[Table] " +
-                "WHERE Email = '" + firstName + "' " +
-                "AND UserPassword = '" + lastName + "'";
+                "WHERE FirstName LIKE N'%" + firstName + "%' " +
+                "AND LastName LIKE N'%" + lastName + "%'";
 
             DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
-
+            
             if (dt.Rows.Count == 0)
             {
                 st = "אין נתונים בטבלה";
@@ -46,9 +39,9 @@ public partial class Menahel : System.Web.UI.Page
                 {
                     st += "<tr>";
 
-                    for (int j = 0; j < dt.Columns.Count; j++)
+                    for (int K = 0; K < dt.Columns.Count; K++)
                     {
-                        st += "<td>" + dt.Rows[i][j] + "</td>";
+                        st += "<td>" + dt.Rows[i][K] + "</td>";
                     }
 
                     st += "</tr>";
@@ -56,6 +49,6 @@ public partial class Menahel : System.Web.UI.Page
 
                 st += "</table>";
             }
-        }
+        
     }
 }

@@ -12,7 +12,7 @@ public partial class Menahel : System.Web.UI.Page
             string lastName = Request.Form["lastName"];
 
             string sql =
-                "SELECT * FROM [dbo].[Table] " +
+                "SELECT * FROM [dbo].[tUsers] " +
                 "WHERE FirstName LIKE N'%" + firstName + "%' " +
                 "AND LastName LIKE N'%" + lastName + "%'";
 

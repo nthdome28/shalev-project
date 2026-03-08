@@ -19,7 +19,7 @@ public partial class SignIn : System.Web.UI.Page
             else
             {
                 string sql =
-                    "SELECT * FROM [dbo].[Table] " +
+                    "SELECT * FROM [dbo].[tUsers] " +
                     "WHERE Email = '" + Email + "' " +
                     "AND UserPassword = '" + passcode + "'";
 

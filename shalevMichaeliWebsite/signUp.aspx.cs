@@ -24,7 +24,7 @@ public partial class Default5 : Page
             hobbies = Request.Form["hobbies"];
             passcode = Request.Form["passcode"];
             string sql =
-                "SELECT * FROM [dbo].[Table] " +
+                "SELECT * FROM [dbo].[tUsers] " +
                 "WHERE Email = '" + Email + "' ";
 
             int ageValue = 0;
@@ -35,7 +35,7 @@ public partial class Default5 : Page
             if (!userExists)
             {
                 string sqlInsert =
-                    "INSERT INTO [dbo].[Table] " +
+                    "INSERT INTO [dbo].[tUsers] " +
                     "(FirstName, LastName, Gender, Email, Age, Hobbies, UserPassword) VALUES (" +
                     "N'" + firstName + "', " +
                     "N'" + lastName + "', " +

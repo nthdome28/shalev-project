@@ -5,39 +5,106 @@
 <head runat="server">
     <title>Shalev Website</title>
 
+                        <asp:ContentPlaceHolder ID="head" runat="server">
+                    </asp:ContentPlaceHolder>
+
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Inter:wght@300;400;500&display=swap');
+
         body {
-            font-family: Arial;
+            font-family: 'Inter', sans-serif;
             margin: 0;
             padding: 0;
-            text-decoration-color: #
+            background: linear-gradient(135deg, #e8f0fe, #f3e8ff);
+            color: #1f1f1f;
         }
 
+        /* HEADER */
         .title {
-            font-size: 28px;
-            text-align: center;
-            padding: 10px;
-            background-color:#8D5A2B;
+            font-family: 'Google Sans', sans-serif;
+            font-size: 26px;
+            font-weight: 500;
+            width: 100%;
+            padding: 20px 40px;
+            background: linear-gradient(90deg, #4f8cff, #7b61ff);
+            color: white;
+            box-sizing: border-box;
+            letter-spacing: 0.5px;
         }
 
-        .menu  {
-            margin: 5px;
-            background-color:#F3E5AB;
+        /* NAV MENU */
+        .navbar {
+            width: 100%;
+            background: #ffffffcc;
+            backdrop-filter: blur(10px);
+            padding: 10px 30px;
+            box-sizing: border-box;
+            display: flex;
+            gap: 10px;
+            border-bottom: 1px solid #e3e3e3;
         }
 
-        img {
-            width: 100px;
-            height: 60px;
-            margin: 5px;
-            
+        .menu {
+            padding: 10px 18px;
+            border-radius: 20px;
+            color: #444746;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            cursor: pointer;
         }
 
+        .menu:hover {
+            background-color: #e8f0fe;
+            color: #1a73e8;
+        }
+
+        /* MAIN CONTENT AREA */
+        .main {
+            width: 100%;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        /* CONTENT SECTIONS */
         .content {
-            padding: 20px;
-            background-color:#FDFBD4;
-            align-content:baseline;
+            max-width: 1000px;
+            width: 100%;
+            padding: 32px;
+            background-color: #ffffff;
+            border-radius: 24px;
+            margin: 20px auto;
+            line-height: 1.6;
+            border: 1px solid #e3e3e3;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
         }
-    </style>
+
+        /* SECTION TITLES */
+        .content h2 {
+            color: #4f8cff;
+        }
+
+        /* IMAGES */
+        img {
+            width: 140px;
+            height: 90px;
+            margin: 10px;
+            border-radius: 12px;
+            transition: all 0.2s ease;
+        }
+
+        /* ICONS */
+        .icons img {
+            height: 26px;
+            width: 26px;
+            padding: 10px;
+            border-radius: 50%;
+            transition: all 0.2s ease;
+        }
+
+
+
+       
+        </style>
 </head>
 
 <body>
@@ -49,19 +116,20 @@
                     shalev website
                 </td>
             </tr>
-
+                                                                                                
             <tr>
                 <td colspan="2" align="center" class="menu" height="100px">
-                    <a href="home.aspx"><img src="images/homepage.png" alt="Home"></a>
-                    <a href="search.aspx"><img src="images/search.png" alt="Search"></a>
-                    <a href="forms.aspx"><img src="images/forms.png"" alt="Forms"></a>
-                    <a href="signIn.aspx"><img src="images/signin.png" alt="Sign In"></a>
-                    <a href="signUp.aspx"><img src="images/signup.png" alt="Sign Up"></a>
-                    <a href="help.aspx"><img src="images/help.png"" alt="Help"></a>
-                    <a href="about.aspx"><img src="images/about.png" alt="About"></a>
-                    <a href="exit.aspx"><img src="images/exit.png" alt="Exit"></a>
-                    <a href="gorge.aspx"><img src="images/gorge.jpg" alt="gorge"></a>
-                </td>
+                    <a href="home.aspx"   class="icons"><img src="images/home.png" alt="Home"></a>
+                    <a href="search.aspx" class="icons"><img src="images/search.png" alt="Search"></a>
+                    <a href="signIn.aspx" class="icons"><img src="images/login.png" alt="Sign In"></a>
+                    <a href="signUp.aspx" class="icons"><img src="images/signup.png" alt="Sign Up"></a>
+                    <a href="help.aspx"   class="icons"><img src="images/question.png"" alt="Help"></a>
+                    <a href="about.aspx"  class="icons"><img src="images/about.png" alt="About"></a>
+                    <a href="logout.aspx" class="icons"><img src="images/logout.png" alt="log out">
+                    <a href="gorge.aspx"  class="icons"><img src="images/gorge.jpg" alt="gorge"></a>
+                    <a href="exit.aspx"   class="icons"><img src="images/reject.png" alt="Exit"></a>
+                       
+</a>                </td>
             </tr>
 
             <tr>
@@ -69,6 +137,7 @@
                     <asp:ContentPlaceHolder ID="MainContent" runat="server">
                     </asp:ContentPlaceHolder>
                 </td>
+
             </tr>
             <tr><td> </td></tr>
 

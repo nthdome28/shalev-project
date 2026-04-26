@@ -29,7 +29,6 @@ public partial class _Default : System.Web.UI.Page
 
             MyAdoHelper.DoQuery("MyDB.mdf", sqlInsert);
 
-            string = "DONE";
         }
     }
 }

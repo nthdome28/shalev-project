@@ -1,6 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master"
     AutoEventWireup="true" CodeFile="signUp.aspx.cs" Inherits="Default5" %>
 
+<asp:Content ID="Content2" ContentPlaceHolderID="head" Runat="Server">
+    <script language="javascript">
+        function checkAll() { 
+            return true;
+        }
+    </script>
+    <h1 style="text-align:center;"> דף הרשמה</h1>
+
+    </asp:Content>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
     <h2>Sign Up</h2>

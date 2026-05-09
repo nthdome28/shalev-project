@@ -4,10 +4,8 @@
 <html>
 <head runat="server">
     <title>Shalev Website</title>
-
                         <asp:ContentPlaceHolder ID="head" runat="server">
                     </asp:ContentPlaceHolder>
-
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Inter:wght@300;400;500&display=swap');
 
@@ -19,7 +17,6 @@
             color: #1f1f1f;
         }
 
-        /* HEADER */
         .title {
             font-family: 'Google Sans', sans-serif;
             font-size: 26px;
@@ -32,7 +29,6 @@
             letter-spacing: 0.5px;
         }
 
-        /* NAV MENU */
         .navbar {
             width: 100%;
             background: #ffffffcc;
@@ -58,14 +54,12 @@
             color: #1a73e8;
         }
 
-        /* MAIN CONTENT AREA */
         .main {
             width: 100%;
             padding: 40px 20px;
             box-sizing: border-box;
         }
 
-        /* CONTENT SECTIONS */
         .content {
             max-width: 1000px;
             width: 100%;
@@ -78,12 +72,10 @@
             box-shadow: 0 8px 24px rgba(0,0,0,0.05);
         }
 
-        /* SECTION TITLES */
         .content h2 {
             color: #4f8cff;
         }
 
-        /* IMAGES */
         img {
             width: 140px;
             height: 90px;
@@ -92,12 +84,11 @@
             transition: all 0.2s ease;
         }
 
-        /* ICONS */
         .icons img {
             height: 26px;
             width: 26px;
             padding: 10px;
-            border-radius: 50%;
+            border-radius: 0;
             transition: all 0.2s ease;
         }
 
@@ -116,7 +107,7 @@
                     shalev website
                 </td>
             </tr>
-                                                                                                
+                                                                                                        
             <tr>
                 <td colspan="2" align="center" class="menu" height="100px">
                     <a href="home.aspx"   class="icons"><img src="images/home.png" alt="Home"></a>
@@ -125,8 +116,8 @@
                     <a href="signUp.aspx" class="icons"><img src="images/signup.png" alt="Sign Up"></a>
                     <a href="help.aspx"   class="icons"><img src="images/question.png"" alt="Help"></a>
                     <a href="about.aspx"  class="icons"><img src="images/about.png" alt="About"></a>
+                    <a href="addItem.aspx"  class="icons"><img src="images/******.png" alt="addItem"></a>
                     <a href="logout.aspx" class="icons"><img src="images/logout.png" alt="log out">
-                    <a href="gorge.aspx"  class="icons"><img src="images/gorge.jpg" alt="gorge"></a>
                     <a href="exit.aspx"   class="icons"><img src="images/reject.png" alt="Exit"></a>
                        
 </a>                </td>

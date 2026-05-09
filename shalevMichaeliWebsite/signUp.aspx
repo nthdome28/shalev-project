@@ -59,14 +59,5 @@
 
     <br /><br />
 
-    <div>
-        first name = <%= firstName %> ,<br />
-        last name = <%= lastName %> ,<br />
-        Email = <%= Email %> ,<br />
-        age group = <%= agegroup %> ,<br />
-        hobbies = <%= hobbies %> ,<br />
-        gender = <%= race %> ,<br />
-        passcode = <%= passcode %>
-    </div>
 
 </asp:Content>

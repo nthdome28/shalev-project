@@ -99,7 +99,7 @@
 </head>
 
 <body>
-    <form runat="server">
+    <form runat="server" method="post" onsubmit="return checkAll();">
         <table width="100%" height="800px" border="5px" background="lightblue" >
 
             <tr>

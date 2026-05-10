@@ -31,7 +31,7 @@ public partial class SignIn : System.Web.UI.Page
                 }
                 else
                 {
-                    Session["user"] = "ok";
+                    Session["user"] = Email;
                     
                     Response.Redirect("home.aspx");
                 }

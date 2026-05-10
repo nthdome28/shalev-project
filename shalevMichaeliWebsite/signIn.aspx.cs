@@ -13,7 +13,7 @@ public partial class SignIn : System.Web.UI.Page
 
             if (Email == "michaelishalev@gmail.com" && passcode == "2010Sh@lev")
             {
-                Session["admin"] = true;
+                Session["nihol"] = "ok";
                 Response.Redirect("menahel.aspx");
             }
             else
@@ -31,7 +31,7 @@ public partial class SignIn : System.Web.UI.Page
                 }
                 else
                 {
-                    Session["user"] = Email;
+                    Session["user"] = "ok";
                     
                     Response.Redirect("home.aspx");
                 }

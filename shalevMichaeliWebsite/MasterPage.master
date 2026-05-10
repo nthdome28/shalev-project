@@ -110,26 +110,26 @@
                                                                                                         
             <tr>
                 <td colspan="2" align="center" class="menu" height="100px">
-                    <a href="home.aspx"   class="icons"><img src="images/home.png" alt="Home"></a>
+                    <a href="home.aspx" class="icons"><img src="images/home.png" alt="Home"></a>
                     <a href="signIn.aspx" class="icons"><img src="images/login.png" alt="Sign In"></a>
                     <a href="signUp.aspx" class="icons"><img src="images/signup.png" alt="Sign Up"></a>
-                    <%if (Session["user"] == "ok") {%>
-                    <a href="search.aspx" class="icons"><img src="images/search.png" alt="Search"></a>
-                    <a href="help.aspx"   class="icons"><img src="images/question.png"" alt="Help"></a>
-                    <a href="about.aspx"  class="icons"><img src="images/about.png" alt="About"></a>
-                    <a href="addItem.aspx"  class="icons"><img src="images/add.png" alt="addItem"></a>
-                    <a href="logout.aspx" class="icons"><img src="images/logout.png" alt="log out">
-                    <a href="exit.aspx"   class="icons"><img src="images/reject.png" alt="Exit"></a>
-                        <%}%>
-                    <%if (Session["nihol"] == "ok" && Session["user"] == "ok") {%>
-                    <a href="addItem.aspx"  class="icons"><img src="images/add.png" alt="addItem"></a>
-                    <a href="menahel.aspx"  class="icons"><img src="images/add.png" alt="addItem"></a>
-                        <%}%>
-
-
-
-                       
-</a>                </td>
+    
+                    <%%>
+                    <%if (Session["user"] != null) {%>
+                        <a href="search.aspx" class="icons"><img src="images/search.png" alt="Search"></a>
+                        <a href="help.aspx" class="icons"><img src="images/question.png" alt="Help"></a>
+                        <a href="about.aspx" class="icons"><img src="images/about.png" alt="About"></a>
+                        <a href="addItem.aspx" class="icons"><img src="images/add.png" alt="addItem"></a>
+                        <a href="logout.aspx" class="icons"><img src="images/logout.png" alt="log out"></a>
+                        <a href="exit.aspx" class="icons"><img src="images/reject.png" alt="Exit"></a>
+                    <%}%>
+    
+                    <%%>
+                    <%if (Session["nihol"] != null && Session["nihol"].ToString() == "ok" && Session["user"] != null) {%>
+                        <a href="addItem.aspx" class="icons"><img src="images/add.png" alt="addItem"></a>
+                        <a href="menahel.aspx" class="icons"><img src="images/add.png" alt="addItem"></a>
+                    <%}%>
+                </td>
             </tr>
 
             <tr>

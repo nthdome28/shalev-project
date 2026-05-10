@@ -11,9 +11,11 @@ public partial class SignIn : System.Web.UI.Page
             string Email = Request.Form["Email"];
             string passcode = Request.Form["passcode"];
 
+           
             if (Email == "michaelishalev@gmail.com" && passcode == "2010Sh@lev")
             {
                 Session["nihol"] = "ok";
+                Session["user"] = Email; 
                 Response.Redirect("menahel.aspx");
             }
             else
@@ -31,8 +33,8 @@ public partial class SignIn : System.Web.UI.Page
                 }
                 else
                 {
-                    Session["user"] = Email;
-                    
+                    Session["user"] = Email; 
+
                     Response.Redirect("home.aspx");
                 }
             }

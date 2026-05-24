@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 public partial class SignIn : System.Web.UI.Page
 {
@@ -14,8 +15,8 @@ public partial class SignIn : System.Web.UI.Page
            
             if (Email == "michaelishalev@gmail.com" && passcode == "2010Sh@lev")
             {
-                Session["nihol"] = "ok";
-                Session["user"] = Email; 
+                Session["admin"] = "ok";
+                Session["name"] = "Manager"; 
                 Response.Redirect("menahel.aspx");
             }
             else
@@ -25,17 +26,22 @@ public partial class SignIn : System.Web.UI.Page
                     "WHERE Email = '" + Email + "' " +
                     "AND UserPassword = '" + passcode + "'";
 
-                bool userExists = MyAdoHelper.IsExist(sql);
+                DataTable dt = MyAdoHelper.ExecuteDataTable(sql);
 
-                if (!userExists)
+                //bool userExists = MyAdoHelper.IsExist(sql);
+
+                //if (!userExists)
+                if (dt.Rows.Count==1)
                 {
-                    st = "אימייל או סיסמה שגויים";
+                    Session["user"] = "ok";
+                    Session["name"] = dt.Rows[0]["FirstName"];
+
+                    Response.Redirect("home.aspx");
+                    
                 }
                 else
                 {
-                    Session["user"] = Email; 
-
-                    Response.Redirect("home.aspx");
+                    st = "אימייל או סיסמה שגויים";
                 }
             }
         }

@@ -32,9 +32,9 @@ public partial class _Default : System.Web.UI.Page
 
             if (!MyAdoHelper.IsExist(sql))
             {
-                // הוספת פריט חדש
-                string sqlInsert = "INSERT INTO [dbo].[tItems] (itemName, itemPrice, itemCount, ItemDescription) VALUES (" +
-                                   "N'" + itemNameStr + "', " + itemPriceStr + ", " + itemCountStr + ", N'')";
+                
+                string sqlInsert = "INSERT INTO [dbo].[tItems] (itemName, itemPrice, itemCount) VALUES (" +
+                                   "N'" + itemNameStr + "', " + itemPriceStr + ", " + itemCountStr + ")";
 
                 MyAdoHelper.DoQuery(sqlInsert);
                 st = "פריט נוסף בהצלחה!";

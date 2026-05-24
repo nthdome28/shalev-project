@@ -93,12 +93,33 @@
         40+   <input type="radio" name="age" value="40+" />
         <br /><br />
 
+        ethnicity:
+        <select id="ethnicity" name="ethnicity">
+          <option value="asian">asian</option>
+          <option value="black">black</option>
+          <option value="hispanic">hispanic</option>
+          <option value="white">white</option>
+          <option value="other">other</option>
+        </select>
+        <br /><br />
+
+
         gender:
         <br />
         female <input type="radio" name="radio1" value="F" checked />
         male   <input type="radio" name="radio1" value="M" />
         other  <input type="radio" name="radio1" value="Other" />
         <br /><br />
+
+        favorite subject:
+        <br />
+        coding: <input type="checkbox" name="check2" id="check_1" checked value="code" />
+        math: <input type="checkbox" name="check2" id="check_2"  value="math"/>
+        java: <input type="checkbox" name="check2" checked id="check_3"  value="java" />
+        gym: <input type="checkbox" name="check2" id="check_4"  value="gym" />
+        <br />
+
+
 
         hobbies:
         <input type="text" name="hobbies" id="hobbies" placeholder="soccer, basketball..." />

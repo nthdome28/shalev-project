@@ -4,7 +4,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" Runat="Server">
     <%
         Session.Abandon();
-        Response.Redirect("signIn.aspx");
+        
         %>
 </asp:Content>
 

@@ -1,150 +1,99 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage"  %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
 <html>
 <head runat="server">
-    <title>Shalev Website</title>
-                        <asp:ContentPlaceHolder ID="head" runat="server">
-                    </asp:ContentPlaceHolder>
+    <title>Shalev Supermarket</title>
+    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500&family=Inter:wght@300;400;500&display=swap');
-
+        /* Base Styles */
         body {
-            font-family: 'Inter', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #e8f0fe, #f3e8ff);
-            color: #1f1f1f;
+            font-family: Arial, sans-serif; /* Sets font */
+            background-color: #f4f7f6; /* Page background color */
+            color: #333; /* Text color */
         }
 
-        .title {
-            font-family: 'Google Sans', sans-serif;
-            font-size: 26px;
-            font-weight: 500;
-            width: 100%;
-            padding: 20px 40px;
-            background: linear-gradient(90deg, #4f8cff, #7b61ff);
-            color: white;
-            box-sizing: border-box;
-            letter-spacing: 0.5px;
+        /* Layout Structure */
+        table {
+            width: 100%; /* Full screen width */
         }
 
-        .navbar {
-            width: 100%;
-            background: #ffffffcc;
-            backdrop-filter: blur(10px);
-            padding: 10px 30px;
-            box-sizing: border-box;
-            display: flex;
-            gap: 10px;
-            border-bottom: 1px solid #e3e3e3;
+        /* Header / Title */
+        .header {
+            background-color: #0056b3; /* Header blue color */
+            color: white; /* White text color */
+            font-size: 26px; /* Text size */
+            font-weight: bold; /* Bold text */
+            padding: 20px; /* Space inside header */
         }
 
-        .menu {
-            padding: 10px 18px;
-            border-radius: 20px;
-            color: #444746;
-            font-weight: 500;
-            transition: all 0.2s ease;
-            cursor: pointer;
+        /* Navigation Bar */
+        .nav {
+            background-color: #ffffff; /* White background color */
+            padding: 30px; /* Space inside nav bar */
+            text-align: center; /* Centers icons */
+        }
+        .nav img {
+            width: 28px; /* Icon width */
+            height: 28px; /* Icon height */
+            margin: 15px;
         }
 
-        .menu:hover {
-            background-color: #e8f0fe;
-            color: #1a73e8;
-        }
-
-        .main {
-            width: 100%;
-            padding: 40px 20px;
-            box-sizing: border-box;
-        }
-
+        /* Main Content Box */
         .content {
-            max-width: 1000px;
-            width: 100%;
-            padding: 32px;
-            background-color: #ffffff;
-            border-radius: 24px;
-            margin: 20px auto;
-            line-height: 1.6;
-            border: 1px solid #e3e3e3;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+            background-color: #ffffff; /* White background color */
+            padding: 30px; /* Space inside content box */
         }
-
         .content h2 {
-            color: #4f8cff;
+            color: #0056b3; /* Blue heading color */
         }
-
-        img {
-            width: 140px;
-            height: 90px;
-            margin: 10px;
-            border-radius: 12px;
-            transition: all 0.2s ease;
-        }
-
-        .icons img {
-            height: 26px;
-            width: 26px;
-            padding: 10px;
-            border-radius: 0;
-            transition: all 0.2s ease;
-        }
-
-
-
-       
-        </style>
+    </style>
 </head>
 
 <body>
     <form runat="server" method="post" onsubmit="return checkAll();">
-        <%if (Session["admin"] == "ok" || Session["user"] == "ok")
-            { %>
+        
+        <% if ((Session["admin"] != null && Session["admin"].ToString() == "ok") || (Session["user"] != null && Session["user"].ToString() == "ok")) { %>
+            <div style="text-align: right; padding: 10px; font-weight: bold; color: #555;">
                 Hello <%=Session["name"] %>
-            <%}%>
-        <table width="100%" height="800px" border="5px" background="lightblue" >
+            </div>
+        <% } %>
 
+        <table>
             <tr>
-                <td  class="title" height="50px">
-                    shalev supermarket
+                <td class="header">
+                    Shalev Supermarket
                 </td>
             </tr>
-                                                                                                        
+            
             <tr>
-                <td colspan="2" align="center" class="menu" height="100px">
-                    <a href="home.aspx" class="icons"><img src="images/home.png" alt="Home"></a>
-                    <a href="signIn.aspx" class="icons"><img src="images/login.png" alt="Sign In"></a>
-                    <a href="signUp.aspx" class="icons"><img src="images/signup.png" alt="Sign Up"></a>
+                <td class="nav">
+                    <a href="home.aspx"><img src="images/home.png" alt="Home"></a>
+                    <a href="signIn.aspx"><img src="images/login.png" alt="Sign In"></a>
+                    <a href="signUp.aspx"><img src="images/signup.png" alt="Sign Up"></a>
                         
-                    <%if ((Session["admin"] != null && Session["admin"].ToString() == "ok") || (Session["user"] != null && Session["user"].ToString() == "ok" ) ) {%>
-
-                        <a href="search.aspx" class="icons"><img src="images/search.png" alt="Search"></a>
-                        <a href="gallary.aspx" class="icons"><img src="images/gallary.png" alt="gallary"></a>
-                        <a href="help.aspx" class="icons"><img src="images/question.png" alt="Help"></a>
-                        <a href="about.aspx" class="icons"><img src="images/about.png" alt="About"></a>
-                        <a href="logout.aspx" class="icons"><img src="images/logout.png" alt="log out"></a>
-                    <%}%>
+                    <% if ((Session["admin"] != null && Session["admin"].ToString() == "ok") || (Session["user"] != null && Session["user"].ToString() == "ok")) { %>
+                        <a href="search.aspx"><img src="images/search.png" alt="Search"></a>
+                        <a href="gallary.aspx"><img src="images/gallary.png" alt="Gallery"></a>
+                        <a href="help.aspx"><img src="images/question.png" alt="Help"></a>
+                        <a href="about.aspx"><img src="images/about.png" alt="About"></a>
+                        <a href="logout.aspx"><img src="images/logout.png" alt="Log Out"></a>
+                    <% } %>
     
-                    <%%>
-                    <%if (Session["admin"] != null && Session["admin"].ToString() == "ok") {%>
-
-                        <a href="addItem.aspx" class="icons"><img src="images/add.png" alt="addItem"></a>
-                        <a href="menahel.aspx" class="icons"><img src="images/profile.png" alt="addItem"></a>
-                    <%}%>
+                    <% if (Session["admin"] != null && Session["admin"].ToString() == "ok") { %>
+                        <a href="addItem.aspx"><img src="images/add.png" alt="Add Item"></a>
+                        <a href="menahel.aspx"><img src="images/profile.png" alt="Admin Profile"></a>
+                    <% } %>
                 </td>
             </tr>
 
             <tr>
-                <td colspan="2" class="content" >
+                <td class="content">
                     <asp:ContentPlaceHolder ID="MainContent" runat="server">
                     </asp:ContentPlaceHolder>
                 </td>
-
             </tr>
-            <tr><td> </td></tr>
-
         </table>
     </form>
 </body>

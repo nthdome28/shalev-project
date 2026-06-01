@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="signUp.aspx.cs" Inherits="SignUpPage" %>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="head" Runat="Server">
-```javascript
+
 <script type="text/javascript"> /* This tells the computer we are starting a game of instructions. */
     function checkAll() { /* This creates a magic button called 'checkAll' that runs our checks. */
         // איפוס הודעות השגיאה /* (Existing Hebrew comment: Clearing error messages) */

@@ -1,97 +1,119 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
-
 <!DOCTYPE html>
 <html>
 <head runat="server">
-    <title>Shalev Supermarket</title>
-    <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
-    
+    <title>Shalev Website</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
     <style>
-        /* Base Styles */
         body {
-            font-family: Arial, sans-serif; /* Sets font */
-            background-color: #f4f7f6; /* Page background color */
-            color: #333; /* Text color */
+            font-family: sans-serif; /* Sets the text style */
+            margin: 0; /* Removes outside spacing */
+            background: #e8f0fe; /* Sets the background color */
+            color: #1f1f1f; /* Sets the text color */
         }
 
-        /* Layout Structure */
-        table {
-            width: 100%; /* Full screen width */
+        .title {
+            font-size: 30px; /* Makes the text big */
+            padding: 2px; /* Adds inside spacing */
+            background: #4f8cff; /* Sets a blue background */
+            color: white; /* Makes the text white */
         }
 
-        /* Header / Title */
-        .header {
-            background-color: #0056b3; /* Header blue color */
-            color: white; /* White text color */
-            font-size: 26px; /* Text size */
-            font-weight: bold; /* Bold text */
-            padding: 20px; /* Space inside header */
+        .layout-table {
+            width: 100%; /* Stretches the table across the whole screen */
+            min-height: 800px; /* Makes sure it's at least this tall */
+            background: lightblue; /* Fills the table with light blue */
+            border: 5px solid #4f8cff; /* Adds a thick blue outline */
+            border-collapse: collapse; /* Removes double lines between boxes */
         }
 
-        /* Navigation Bar */
-        .nav {
-            background-color: #ffffff; /* White background color */
-            padding: 30px; /* Space inside nav bar */
-            text-align: center; /* Centers icons */
-        }
-        .nav img {
-            width: 28px; /* Icon width */
-            height: 28px; /* Icon height */
-            margin: 15px;
+        .user-greeting {
+            padding: 10px; /* Adds inside spacing */
+            color: #4f8cff; /* Makes the text blue */
+            text-align: right; /* Pushes the text to the right side */
+            background: white; /* Sets a white background */
         }
 
-        /* Main Content Box */
+        .menu {
+            padding: 20px; /* Adds inside spacing */
+            background: white; /* Sets a white background */
+            border-bottom: 1px solid #e3e3e3; /* Draws a thin gray line at the bottom */
+            text-align: center; /* Puts the menu items in the middle */
+        }
+
+        .icons {
+            padding: 20px; /* Adds inside spacing */
+            border-radius: 20px; /* Rounds the corners */
+            transition: 0.2s; /* Makes the hover color change smoothly */
+
+        }
+
+        .icons:hover {
+            background: #e8f0fe; /* Changes the background color when the mouse touches it */
+        }
+
+        .icons img {
+            height: 30px; /* Sets the image height */
+            width: 30px; /* Sets the image width */
+            vertical-align: middle; /* Lines the image up straight with the text */
+        }
+
         .content {
-            background-color: #ffffff; /* White background color */
-            padding: 30px; /* Space inside content box */
+            padding: 15px; /* Adds inside spacing */
+            background: white; /* Sets a white background */
+            border-radius: 24px; /* Rounds the corners a lot */
+            margin: 50px 40px; /* Centers the box on the screen */
         }
+
         .content h2 {
-            color: #0056b3; /* Blue heading color */
+            color: #4f8cff; /* Makes header text blue */
         }
     </style>
 </head>
-
 <body>
     <form runat="server" method="post" onsubmit="return checkAll();">
         
         <% if ((Session["admin"] != null && Session["admin"].ToString() == "ok") || (Session["user"] != null && Session["user"].ToString() == "ok")) { %>
-            <div style="text-align: right; padding: 10px; font-weight: bold; color: #555;">
-                Hello <%=Session["name"] %>
+            <div class="user-greeting">
+                Hello <%= Session["name"] %>
             </div>
         <% } %>
 
-        <table>
+        <table class="layout-table">
             <tr>
-                <td class="header">
+                <td class="title">
                     Shalev Supermarket
                 </td>
             </tr>
-            
+                                                                                                        
             <tr>
-                <td class="nav">
-                    <a href="home.aspx"><img src="images/home.png" alt="Home"></a>
-                    <a href="signIn.aspx"><img src="images/login.png" alt="Sign In"></a>
-                    <a href="signUp.aspx"><img src="images/signup.png" alt="Sign Up"></a>
+                <td class="menu">
+                    <a href="home.aspx" class="icons"><img src="images/home.png" alt="Home"></a>
+                    <a href="signIn.aspx" class="icons"><img src="images/login.png" alt="Sign In"></a>
+                    <a href="signUp.aspx" class="icons"><img src="images/signup.png" alt="Sign Up"></a>
                         
                     <% if ((Session["admin"] != null && Session["admin"].ToString() == "ok") || (Session["user"] != null && Session["user"].ToString() == "ok")) { %>
-                        <a href="search.aspx"><img src="images/search.png" alt="Search"></a>
-                        <a href="gallary.aspx"><img src="images/gallary.png" alt="Gallery"></a>
-                        <a href="help.aspx"><img src="images/question.png" alt="Help"></a>
-                        <a href="about.aspx"><img src="images/about.png" alt="About"></a>
-                        <a href="logout.aspx"><img src="images/logout.png" alt="Log Out"></a>
+                        <a href="search.aspx" class="icons"><img src="images/search.png" alt="Search"></a>
+                        <a href="gallary.aspx" class="icons"><img src="images/gallary.png" alt="Gallery"></a>
+                        <a href="help.aspx" class="icons"><img src="images/question.png" alt="Help"></a>
+                        <a href="about.aspx" class="icons"><img src="images/about.png" alt="About"></a>
+                        <a href="logout.aspx" class="icons"><img src="images/logout.png" alt="Log out"></a>
                     <% } %>
     
                     <% if (Session["admin"] != null && Session["admin"].ToString() == "ok") { %>
-                        <a href="addItem.aspx"><img src="images/add.png" alt="Add Item"></a>
-                        <a href="menahel.aspx"><img src="images/profile.png" alt="Admin Profile"></a>
+                        <a href="addItem.aspx" class="icons"><img src="images/add.png" alt="Add Item"></a>
+                        <a href="menahel.aspx" class="icons"><img src="images/profile.png" alt="Manager"></a>
                     <% } %>
                 </td>
             </tr>
 
             <tr>
-                <td class="content">
-                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                    </asp:ContentPlaceHolder>
+                <td>
+                    <div class="content">
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
                 </td>
             </tr>
         </table>

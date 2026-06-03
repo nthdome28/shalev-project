@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Web.UI;
 using System.Text.RegularExpressions;
-
 public partial class SignUpPage : Page
 {
     public string st = "";
@@ -37,7 +36,7 @@ public partial class SignUpPage : Page
             string sqlCheck = "SELECT * FROM [dbo].[tUsers] WHERE Email = '" + mail + "'";
             if (MyAdoHelper.IsExist(sqlCheck))
             {
-                st = "error: האימייל כבר רשום במערכת";
+                st = "מייל זה כבר קיים במערכת"; //הודעת שגיאה
             }
             else
             {

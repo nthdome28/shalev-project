@@ -89,13 +89,18 @@
                                                                                                         
             <tr>
                 <td class="menu">
+                   <% if (Session["admin"] == null && Session["user"] == null) { %>
                     <a href="home.aspx" class="icons"><img src="images/home.png" alt="Home"></a>
                     <a href="signIn.aspx" class="icons"><img src="images/login.png" alt="Sign In"></a>
                     <a href="signUp.aspx" class="icons"><img src="images/signup.png" alt="Sign Up"></a>
                     <a href="gallary.aspx" class="icons"><img src="images/gallary.png" alt="Gallery"></a>
-                        
+                       <% } %> 
+
+
                     <% if ((Session["admin"] != null && Session["admin"].ToString() == "ok") || (Session["user"] != null && Session["user"].ToString() == "ok")) { %>
-                        <a href="search.aspx" class="icons"><img src="images/search.png" alt="Search"></a>
+                    <a href="home.aspx" class="icons"><img src="images/home.png" alt="Home"></a>    
+                    <a href="search.aspx" class="icons"><img src="images/search.png" alt="Search"></a>
+                    <a href="gallary.aspx" class="icons"><img src="images/gallary.png" alt="Gallery"></a>
                         <a href="help.aspx" class="icons"><img src="images/question.png" alt="Help"></a>
                         <a href="about.aspx" class="icons"><img src="images/about.png" alt="About"></a>
                         <a href="logout.aspx" class="icons"><img src="images/logout.png" alt="Log out"></a>
